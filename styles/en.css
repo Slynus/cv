@@ -1,0 +1,29 @@
+@media print {
+  #print-page-1-end {
+    margin-bottom: 10rem;
+  }
+
+  #print-page-2-end {
+    margin-bottom: 14rem;
+  }
+
+  #print-page-3-start {
+    padding-top: 3rem;
+  }
+
+  #print-page-3-end {
+    margin-bottom: 6rem;
+  }
+
+  #print-page-4-start {
+    padding-top: 5rem;
+  }
+
+  #print-page-4-end {
+    margin-bottom: 12rem;
+  }
+
+  #print-page-5-start {
+    padding-top: 4rem;
+  }
+}

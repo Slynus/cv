@@ -3,7 +3,7 @@
 :root {
   --mainTextColor-light: #000;
   --secondaryTextColor-light: rgb(51 51 51);
-  --mainLinkColor-light: #0da2b8;
+  --mainLinkColor-light: #0088ff;
   --mainBorderColor-light: rgb(218, 218, 218);
   --mainBgColor-light: rgb(249, 250, 251);
 
@@ -11,12 +11,12 @@
   --secondaryTextColor-dark: #adb0b1;
   --mainLinkColor-dark: #1690a3;
   --mainBorderColor-dark: #6c7086;
-  --mainBgColor-dark: #181825;
+  --mainBgColor-dark: #1e1e1e;
 
   --mainTextColor: var(--mainTextColor-dark);
   --secondaryTextColor: var(--secondaryTextColor-dark);
-  --mainLinkColor: var(--mainLinkColor-dark);
-  --mainBorderColor: var(--mainBorderColor-dark);
+  --mainLinkColor: var(--mainLinkColor-light);
+  --mainBorderColor: var(--mainLinkColor-light);
   --mainBorderColorAlt: var(--mainBorderColor-light);
   --mainBgColor: var(--mainBgColor-dark);
 }
@@ -199,6 +199,41 @@ a {
   padding-right: 0.3rem;
 }
 
+#qualifications--list > li::before {
+  content: "✓";
+  color: var(--mainLinkColor);
+  position: relative;
+  left: -0.7em;
+  font-weight: bold;
+}
+
+/* Download resume button styling */
+#socials--list a[href$=".pdf"] {
+  background-color: var(--mainLinkColor);
+  color: var(--mainBgColor);
+  padding: 0.6em 1.2em;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid var(--mainLinkColor);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+}
+
+#socials--list a[href$=".pdf"]:hover {
+  background-color: transparent;
+  color: var(--mainLinkColor);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(22, 144, 163, 0.3);
+}
+
+/* Optional: Add a subtle animation on hover */
+#socials--list a[href$=".pdf"]:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(22, 144, 163, 0.2);
+}
+
 @media (max-width: 600px) {
   .section--page {
     padding-top: 1em;
@@ -227,9 +262,22 @@ a {
 }
 
 @media print {
+  :root {
+    --mainTextColor: var(--mainTextColor-light);
+    --secondaryTextColor: var(--mainTextColor-light);
+    --mainLinkColor: var(--mainTextColor-light);
+    --mainBorderColor: var(--mainTextColor-light);
+    --mainBorderColorAlt: var(--mainBorderColor-light);
+  }
+
   #url-bar {
     display: none;
   }
+
+  #languages--list {
+    display: none;
+  }
+
   @page {
     size: auto; /* auto is the initial value */
     margin: 0; /* this affects the margin in the printer settings */
@@ -246,33 +294,5 @@ a {
   #work-history-wrapper {
     margin-top: 4rem;
     padding-top: 4rem;
-  }
-
-  #print-page-1-end {
-    margin-bottom: 8rem;
-  }
-
-  #print-page-2-end {
-    margin-bottom: 10rem;
-  }
-
-  #print-page-3-start {
-    padding-top: 3rem;
-  }
-
-  #print-page-3-end {
-    margin-bottom: 6rem;
-  }
-
-  #print-page-4-start {
-    padding-top: 3rem;
-  }
-
-  #print-page-4-end {
-    margin-bottom: 12rem;
-  }
-
-  #print-page-5-start {
-    padding-top: 3rem;
   }
 }
