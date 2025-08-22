@@ -10,21 +10,21 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/favicon-32x32.png"
+      href="../assets/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
   </head>
   <body>
     <div id="container--main">
       <section id="wrapper--intro" class="section--page">
-        <img id="profile-pic" src="./assets/profile.jpg" />
+        <img id="profile-pic" src="../assets/profile.jpg" />
         <div>
           <h1 id="user-name">DURON Valentin</h1>
-          <p id="bio">Ingénieur Logiciel</p>
-          <p id="bio">28 ans</p>
+          <p id="bio">Software Engineer</p>
+          <p id="bio">29 years old</p>
           <p id="email">
-            <a href="mailto:valentin.duron@gmail.com"
-              >✉️ valentin.duron@gmail.com</a
+            <a href="mailto:valentin.duron.work@gmail.com"
+              >✉️ valentin.duron.work@gmail.com</a
             >
           </p>
         </div>
@@ -33,30 +33,34 @@
       <section class="section--page">
         <div id="socials--list">
           <a href="https://www.linkedin.com/in/valentin-duron/" target="_blank">
-            <img id="li-logo" src="./assets/li-logo.png" alt="LinkedIn" />
+            <img id="li-logo" src="../assets/li-logo.png" alt="LinkedIn" />
             LinkedIn</a
           >
-          <a href="./assets/vduronCV.pdf" target="_blank"
-            >📃 Télécharger le CV</a
+          <a href="../assets/vduronCV_EN.pdf" target="_blank"
+            >📃 Download resume</a
           >
         </div>
       </section>
 
       <section class="section--page">
-        <h2>Compétences</h2>
+        <div id="languages--list">
+          <a id="languages--selected" href="../en/">English</a> |
+          <a href="../fr/">Français</a>
+        </div>
+      </section>
+
+      <section class="section--page">
+        <h2>Skills</h2>
         <ul id="qualifications--list">
-          <li>✔️ 7 ans d'expérience</li>
+          <li>✔️ 7 years experience</li>
+          <li>✔️ Expertise in application backend development</li>
+          <li>✔️ Strong ability to implement user interfaces</li>
+          <li>✔️ Practical experience of working in Agile contexts</li>
           <li>
-            ✔️ Expertise avancée dans le développement de Backend applicatifs
+            ✔️ Ability to analyze and solve technical or functional problems
           </li>
-          <li>✔️ Forte apptitude à implémenter des interfaces utilisateur</li>
-          <li>✔️ Expériences pratique de travail dans des contextes Agiles</li>
-          <li>
-            ✔️ Capacités à analyser et résoudre des problèmes techniques ou
-            fonctionnels
-          </li>
-          <li>✔️ Basé en europe</li>
-          <li>✔️ Français et Anglais</li>
+          <li>✔️ Located in Europe</li>
+          <li>✔️ French and English</li>
         </ul>
       </section>
 
@@ -83,19 +87,17 @@
       </section>
 
       <section id="work-history-wrapper" class="section--page">
-        <h2>Expériences</h2>
+        <h2>Work experiences</h2>
 
         <div class="line-break"></div>
         <div class="card--work-history">
           <strong>QimInfo - Lausanne, Suisse</strong>
-          <p>Juillet 2023 - Aujourd'hui</p>
+          <p>July 2023 - Today</p>
           <p>
-            En tant qu'ingénieur au sein de l'équipe de développement de la
-            Ville de Lausanne, j'ai participé au développement d'une application
-            transverse de gestion électronique de documents. Mon implication
-            dans ce projet s'est matérialisé à la fois par le développement
-            logiciel ainsi que par la collaboration entre les differents clients
-            internes de la Ville.
+            At City of Lausanne Development Team : Developed a cross-functional
+            electronic document management application. Contributed to both
+            software development and collaboration between internal
+            stakeholders.
           </p>
           <ul>
             <li>Développement Backend : Java, Spring, OpenCMIS</li>
@@ -275,22 +277,4 @@
       </section>
     </div>
   </body>
-  <script type="text/javascript">
-    let lang = window.navigator.languages
-      ? window.navigator.languages[0]
-      : null;
-    lang =
-      lang ||
-      window.navigator.language ||
-      window.navigator.browserLanguage ||
-      window.navigator.userLanguage;
-
-    console.log(lang);
-
-    if (lang.includes("fr")) {
-      window.location.href = window.location + "fr/";
-    } else {
-      window.location.href = window.location + "en/";
-    }
-  </script>
 </html>

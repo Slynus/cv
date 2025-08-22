@@ -10,21 +10,21 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/favicon-32x32.png"
+      href="../assets/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
   </head>
   <body>
     <div id="container--main">
       <section id="wrapper--intro" class="section--page">
-        <img id="profile-pic" src="./assets/profile.jpg" />
+        <img id="profile-pic" src="../assets/profile.jpg" />
         <div>
           <h1 id="user-name">DURON Valentin</h1>
           <p id="bio">Ingénieur Logiciel</p>
-          <p id="bio">28 ans</p>
+          <p id="bio">29 ans</p>
           <p id="email">
-            <a href="mailto:valentin.duron@gmail.com"
-              >✉️ valentin.duron@gmail.com</a
+            <a href="mailto:valentin.duron.work@gmail.com"
+              >✉️ valentin.duron.work@gmail.com</a
             >
           </p>
         </div>
@@ -33,12 +33,19 @@
       <section class="section--page">
         <div id="socials--list">
           <a href="https://www.linkedin.com/in/valentin-duron/" target="_blank">
-            <img id="li-logo" src="./assets/li-logo.png" alt="LinkedIn" />
+            <img id="li-logo" src="../assets/li-logo.png" alt="LinkedIn" />
             LinkedIn</a
           >
-          <a href="./assets/vduronCV.pdf" target="_blank"
+          <a href="../assets/vduronCV_FR.pdf" target="_blank"
             >📃 Télécharger le CV</a
           >
+        </div>
+      </section>
+
+      <section class="section--page">
+        <div id="languages--list">
+          <a href="../en/">English</a> |
+          <a id="languages--selected" href="../fr/">Français</a>
         </div>
       </section>
 
@@ -46,9 +53,7 @@
         <h2>Compétences</h2>
         <ul id="qualifications--list">
           <li>✔️ 7 ans d'expérience</li>
-          <li>
-            ✔️ Expertise avancée dans le développement de Backend applicatifs
-          </li>
+          <li>✔️ Expertise dans le développement de Backends applicatifs</li>
           <li>✔️ Forte apptitude à implémenter des interfaces utilisateur</li>
           <li>✔️ Expériences pratique de travail dans des contextes Agiles</li>
           <li>
@@ -275,22 +280,4 @@
       </section>
     </div>
   </body>
-  <script type="text/javascript">
-    let lang = window.navigator.languages
-      ? window.navigator.languages[0]
-      : null;
-    lang =
-      lang ||
-      window.navigator.language ||
-      window.navigator.browserLanguage ||
-      window.navigator.userLanguage;
-
-    console.log(lang);
-
-    if (lang.includes("fr")) {
-      window.location.href = window.location + "fr/";
-    } else {
-      window.location.href = window.location + "en/";
-    }
-  </script>
 </html>

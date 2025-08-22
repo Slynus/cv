@@ -123,9 +123,30 @@ a {
 }
 
 #socials--list a:hover {
-  font-weight: 100;
   color: var(--mainLinkColor);
   font-size: 0.9em;
+}
+
+#languages--list {
+  display: flex;
+  column-gap: 1em;
+  flex-wrap: wrap;
+}
+
+#languages--list a {
+  font-weight: 300;
+  color: var(--secondaryTextColor);
+  font-size: 0.9em;
+  transition: 0.3s;
+}
+
+#languages--list :not(a#languages--selected):hover {
+  color: var(--mainLinkColor);
+  font-size: 0.9em;
+}
+
+#languages--list a#languages--selected {
+  font-weight: 800;
 }
 
 #qualifications--list {
